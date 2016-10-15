@@ -26,15 +26,14 @@ def game(rest_atmpt = 10):
                     print("Exiting")
                     break
             else:
-                left_tries()
+                left_tries(rest_atmpt)
                 print("You missed it , Try Again")
                 print("You have more {} attempts".format(rest_atmpt))
 
         else:
             print("Follow the rules!!!!! . Please put a number between 1 and 10")
 
-def left_tries():
-    global rest_atmpt
+def left_tries(rest_atmpt):
     if rest_atmpt != 0:
         rest_atmpt = rest_atmpt - 1
     else:
