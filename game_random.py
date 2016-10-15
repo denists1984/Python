@@ -35,7 +35,7 @@ def game():
 
 def left_tries():
     if rest_atmpt != 0:
-        rest = rest_atmpt - 1
+        rest_atmpt = rest_atmpt - 1
         print("BALALALA {}".format(rest_atmpt))
         return rest_atmpt
     else:
