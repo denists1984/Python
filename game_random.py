@@ -26,7 +26,7 @@ def game(rest_atmpt = 10):
                     print("Exiting")
                     break
             else:
-                left_tries(rest_atmpt)
+                rest_atmpt = left_tries(rest_atmpt)
                 print("You missed it , Try Again")
                 print("You have more {} attempts".format(rest_atmpt))
 
@@ -36,18 +36,21 @@ def game(rest_atmpt = 10):
 def left_tries(rest_atmpt):
     if rest_atmpt != 0:
         rest_atmpt = rest_atmpt - 1
+        return rest_atmpt
     else:
         print("You have no more attempts to gees the secret number ")
         print("The number ewas - {} !!!".format(secret_num))
         exit
 
 def play_again():
-    try:
-        decision = str(raw_input("Please Enter 'Y' to play again or 'N' to exit -->"))
-    except ValueError:
+        decision = raw_input("Please Enter 'Y' to play again or 'N' to exit -->"))
+        if decision != 'Y' or decision  != 'N':
+
+
         print("Unexpected User input")
-        decision = "bad"
+
     return decision
 
 
 game()
+
