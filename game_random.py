@@ -37,7 +37,6 @@ def left_tries():
     if rest_atmpt != 0:
         rest_atmpt = rest_atmpt - 1
         print("BALALALA {}".format(rest_atmpt))
-        return rest_atmpt
     else:
         print("You have no more attempts to gees the secret number ")
         print("The number ewas - {} !!!".format(secret_num))
