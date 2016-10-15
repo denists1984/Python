@@ -34,6 +34,7 @@ def game():
             print("Follow the rules!!!!! . Please put a number between 1 and 10")
 
 def left_tries():
+    global rest_atmpt
     if rest_atmpt != 0:
         rest_atmpt = rest_atmpt - 1
         print("BALALALA {}".format(rest_atmpt))
