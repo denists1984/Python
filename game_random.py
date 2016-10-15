@@ -3,9 +3,9 @@ import random
 # generate random num
 secret_num = random.randint(1, 10)
 print(secret_num)
-rest_atmpt = 10
 
-def game():
+
+def game(rest_atmpt = 10):
     while True:
         #get a number guess from the player
         try:
