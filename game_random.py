@@ -17,14 +17,14 @@ def game():
         #compare guess to secter numer
             if player_num == secret_num:
                 print('Congrads you got it!!! Secret num was {}'.format(secret_num))
-#                play_again()
-#                if decision == "Y":
-#                    game()
-#                elif decision == 'bad':
-#                    play_again()
-#                elif decision == "N":
-#                    print("Exiting")
-#                    break
+                decision = play_again()
+                if decision == "Y":
+                    game()
+                elif decision == 'bad':
+                    play_again()
+                elif decision == "N":
+                    print("Exiting")
+                    break
             else:
                 left_tries()
                 print("You missed it , Try Again")
@@ -37,7 +37,6 @@ def left_tries():
     global rest_atmpt
     if rest_atmpt != 0:
         rest_atmpt = rest_atmpt - 1
-        print("BALALALA {}".format(rest_atmpt))
     else:
         print("You have no more attempts to gees the secret number ")
         print("The number ewas - {} !!!".format(secret_num))
@@ -50,7 +49,6 @@ def play_again():
         print("Unexpected User input")
         decision = "bad"
     return decision
-
 
 
 game()
